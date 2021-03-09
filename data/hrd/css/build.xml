@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<project name="hrd2css" default="hrd2css" basedir=".">
+
+<!-- all properties -->
+
+<property name="xslt-classpath" value=""/>
+
+<!-- dtd2xsd  -->
+
+<target name="hrd2css.prop">
+ <property file="hrd2css.properties"/>
+ <xmlcatalog id="xsd2hrcdtd">
+  <dtd publicid="-//Cail Lomecb//DTD Colorer HRC take5//EN"
+       location="../../doc/2003/hrc.dtd"/>
+  <dtd publicid="-//Cail Lomecb//DTD Colorer HRD take5//EN"
+       location="../../doc/2003/hrd.dtd"/>
+  <dtd publicid="-//Cail Lomecb//DTD Colorer CATALOG take5//EN"
+       location="../../doc/2003/catalog.dtd"/>
+  <dtd publicid="-//W3C//DTD XMLSCHEMA 200102//EN"
+       location="../../../doc/2003/XMLSchema.dtd"/>
+ </xmlcatalog>
+</target>
+ 
+<target name="hrd2css" depends="hrd2css.prop">
+ <xslt in="${input}" out="${output}" style="../../bin/hrd2css/hrd2css.xsl">
+  <xmlcatalog refid="xsd2hrcdtd"/>
+ </xslt>  
+</target>
+
+</project>

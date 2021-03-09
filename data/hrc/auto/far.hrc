@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<!DOCTYPE hrc PUBLIC "-//Cail Lomecb//DTD Colorer HRC take5//EN"
+  "http://colorer.sf.net/2003/hrc.dtd">
+<hrc version="take5" xmlns="http://colorer.sf.net/2003/hrc"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://colorer.sf.net/2003/hrc http://colorer.sf.net/2003/hrc.xsd">
+
+  <prototype name="farhelp" group="scripts.far" description="Far Help">
+    <location link="far/farhelp.hrc"/>
+    <filename>/\.hlf$/i</filename>
+    <firstline weight="2">/^\.Language/</firstline>
+  </prototype>
+
+  <prototype name="farlng" group="scripts.far" description="Far .lng">
+    <location link="far/farlng.hrc"/>
+    <filename>/\.lng$/i</filename>
+    <firstline weight="2">/^\.Language/</firstline>
+  </prototype>
+  
+  <prototype name="farmenu" group="scripts.far" description="FarMenu.Ini">
+    <location link="far/farmenu.hrc"/>
+    <filename weight="4">/FarMenu\.Ini$/i</filename>
+  </prototype>
+  
+  <prototype name="farmailscript" group="scripts.far" description="FARMail Script">
+    <location link="far/farmailscript.hrc"/>
+    <filename>/\.fms$/i</filename>
+  </prototype>
+
+  <prototype name="far.macro" group="scripts.far" description="Far macros">
+    <location link="far/macro.hrc"/>
+    <filename>/\.macro$/</filename>
+  </prototype>
+  
+  <!-- old -->
+  
+  <prototype name="tgs" group="scripts.far" description="TGS script">
+    <location link="types/tgs.hrc"/>
+    <filename>/\.tgs$/i</filename>
+  </prototype>
+
+  <prototype name="truemac" group="scripts.far" description="True Macro">
+    <location link="types/truemac.hrc"/>
+    <filename>/truemac\.ctl$/i</filename>
+  </prototype>
+
+  <prototype name="calcset" group="scripts.far" description="calc's defines">
+    <location link="gen/calcset.hrc"/>
+    <filename>/calcset\.csr$/i</filename>
+  </prototype>
+
+</hrc>

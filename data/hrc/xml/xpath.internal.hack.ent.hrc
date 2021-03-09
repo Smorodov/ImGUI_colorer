@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<entity name="before" value="(?{}[\(\[\{,:]?~1|^)"/>
+<entity name="after" value="\M\s*(?{}[^\)\]\}:;,+\-=&lt;>!]|$)"/>
+
+<scheme name="expr-op">
+	<regexp match="/%before;(%lt;|%gt;)=?%after;/" region="xpath:expr.op"/>
+	<regexp match="/%before;(\!?\=|\*?~1\*|\w?~1\-|\+)%after;/" region="xpath:expr.op"/>
+</scheme>
+
+<scheme name="expr-op2">
+	<inherit scheme="expr-op"/>
+	<regexp match="/%before;(%lt;{2}|%gt;{2})%after;/" region="xpath:expr.op"/>
+</scheme>

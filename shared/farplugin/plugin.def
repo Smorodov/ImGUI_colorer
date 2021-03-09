@@ -1,0 +1,23 @@
+LIBRARY
+EXPORTS
+   ClosePlugin
+   Compare
+   Configure
+   DeleteFiles
+   ExitFAR
+   FreeFindData
+   GetFiles
+   GetFindData
+   GetOpenPluginInfo
+   GetPluginInfo
+   GetVirtualFindData
+   MakeDirectory
+   OpenFilePlugin
+   OpenPlugin
+   ProcessEvent
+   ProcessHostFile
+   ProcessKey
+   PutFiles
+   SetDirectory
+   SetFindList
+   SetStartupInfo

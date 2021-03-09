@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+	Rules for convert concole HRD to RGB.
+-->
+
+<project name="con2rgb" default="con2rgb" basedir=".">
+
+<property name="hrd" value="../../hrd" description="hrd location"/>
+
+<target name="con2rgb.prop">
+	<property file="con2rgb.properties"/>
+	<xmlcatalog id="xsd2hrcdtd">
+	<dtd publicid="-//Cail Lomecb//DTD Colorer HRC take5//EN"
+		location="../../doc/2003/hrc.dtd"/>
+	<dtd publicid="-//Cail Lomecb//DTD Colorer HRD take5//EN"
+		location="../../doc/2003/hrd.dtd"/>
+	<dtd publicid="-//Cail Lomecb//DTD Colorer CATALOG take5//EN"
+		location="../../doc/2003/catalog.dtd"/>
+	<dtd publicid="-//W3C//DTD XMLSCHEMA 200102//EN"
+		location="../../../doc/2003/XMLSchema.dtd"/>
+ </xmlcatalog>
+</target>
+
+<target name="con2rgb" depends="con2rgb.prop">
+	<xslt in="${hrd}/console/${input}" out="${hrd}/rgb/${output}" style="con2rgb.xsl">
+		<xmlcatalog refid="xsd2hrcdtd"/>
+		<param name="hcd" expression="hcd/${hcd}"/>
+	</xslt>  
+</target>
+
+</project>

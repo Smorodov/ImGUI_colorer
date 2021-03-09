@@ -1,0 +1,9 @@
+
+  <hrd-sets>
+
+    <hrd class="text" name="tags" description="HTML italic, underline indention">
+      <location link="hrd/text/tags.hrd"/>
+    </hrd>
+
+  </hrd-sets>
+
